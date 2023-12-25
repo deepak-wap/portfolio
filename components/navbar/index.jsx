@@ -52,8 +52,8 @@ useEffect(()=>{
 
   return (
     <>
-      <Header className={`w-full flex justify-between items-center px-[8.7%] h-[95px] z-[50] transition ease-in-out duration-700 fixed navbar ${scrollHeight > 1 ? 'bg-[#040B17]/[1]' : 'bg-[#040B17]/0'}`}> {/*bg-[#040B17] */}
-        <h1 className="text-[38px] text-white font-grotesk font-bold">
+      <Header className={`w-full flex justify-between items-center px-[8.7%] h-[95px] z-[50] transition ease-in-out duration-700 fixed navbar bg-[#F7F7FF]`}> {/*bg-[#040B17] */}
+        <h1 className="text-[38px] text-black font-grotesk font-bold">
           DEEPAK
         </h1>
         <div className="flex items-center gap-14">
@@ -68,7 +68,7 @@ useEffect(()=>{
             className={`gap-1 text-[14.7px] text-[#ece9e9] font-grotesk font-semibold tracking-[0.8px]`}
           />
           <a href="#contact" className="nav-btn">
-          <Button type="primary w-[145px] h-[56px] rounded-[30px] bg-[#0788FC] font-normal">
+          <Button type="primary w-[145px] h-[56px] rounded-[30px] bg-[black] font-normal">
             <span className="text-[15.5px] font-grotesk tracking-[0.3px]">
               CONTACT
             </span>

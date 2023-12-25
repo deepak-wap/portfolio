@@ -60,7 +60,7 @@ const Project = ()=>{
 
     return (
         <div
-        className="grid grid-cols-1 px-[8.6%] pb-16 bg-[#07233B]"
+        className="grid grid-cols-1 px-[8.6%] pb-16 bg-[#97B2BB]"
         id="projects"
       >
         <div className="mt-28">
@@ -72,7 +72,7 @@ const Project = ()=>{
             MY WORK
           </h1>
         </Button>
-        <h2 className="text-[40px] text-white font-grotesk font-bold leading-[48px] mb-10">
+        <h2 className="text-[40px] text-black font-grotesk font-bold leading-[48px] mb-10">
           RECENT PROJECT
         </h2>
         <div className="grid grid-cols-3 gap-x-8">

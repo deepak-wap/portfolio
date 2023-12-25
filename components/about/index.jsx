@@ -13,7 +13,7 @@ import { Button, Layout, Card } from "antd";
 
 const About = ()=>{
     return (
-      <div className="grid grid-cols-2 px-[8.5%] pb-16 bg-[#05192E]" id="about">
+      <div className="grid grid-cols-2 px-[8.5%] pb-16 bg-[#F7F7FF]" id="about">
         <div className="pl-24 pt-10 pb-24 mt-28 relative">
           <Image
             src="/images/about-banner.png"
@@ -40,7 +40,7 @@ const About = ()=>{
             </h1>
           </Button>
           <div className="w-[583px] flex justify-between items-start mb-5">
-            <h2 className="text-[40px] text-white font-grotesk font-bold leading-[48px]">
+            <h2 className="text-[40px] text-black font-grotesk font-bold leading-[48px]">
               <p>I AM AVAILABLE FOR</p>
               <p className="text-[#0788FF]">UI UX DESIGN</p>
               <p>PROJECTS</p>
@@ -52,7 +52,7 @@ const About = ()=>{
               alt="effect-1"
             />
           </div>
-          <p className="text-[16px] text-white font-grotesk w-[380px] leading-[25px] mb-8">
+          <p className="text-[16px] text-black font-grotesk w-[380px] leading-[25px] mb-8">
             The standard chunk of Lorem Ipsum used since the 1500s is reproduced
             below for those interested. Sections 1.10.32 and 1.10.33 from "de
             Finibus Bonorum et Malorum" by Cicero are also reproduced in their
@@ -86,10 +86,10 @@ const About = ()=>{
             </div>
           </div>
           <div className="common-btn">
-            <Button type="primary w-[192px] h-[56px] rounded-[30px] bg-[#0788FC] font-medium">
+            <Button type="primary w-[192px] h-[56px] rounded-[30px] bg-[black] font-medium">
               <span className="text-[15.5px] font-grotesk tracking-[0.3px]">
                 GET IN TOUCH
-                <i className="fa fa-long-arrow-right text-[16px] text-white ml-2"></i>
+                <i className="fa fa-long-arrow-right text-[16px] ml-2"></i>
               </span>
             </Button>
           </div>
