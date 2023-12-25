@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Rampart+One&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+/* class="ant-menu-overflow-item ant-menu-item ant-menu-item-selected ant-menu-item-only-child" */
+.ant-menu-overflow{
+    background-color: transparent;
+}
+.ant-menu-title-content{
+    color: #ece9e9 !important;
+    margin-top: -10px !important;
+
+}
+
+.nav-btn .ant-btn:hover, .home-btn .ant-btn:hover, .common-btn .ant-btn:hover{
+    background-color: black !important;
+    text-decoration: underline !important;
+    font-weight: bold !important;
+    border: 2px solid white !important;
+    transition: 0.5s;
+}
+
+.ant-menu-item:hover, .ant-menu-item-selected{
+    color: #ece9e9 !important;
+    /* border-bottom: 2px solid white !important; */
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 2px;
+    transition: .5s;
+}
+
+.ant-menu-item::after, .ant-menu-item-selected::after{
+    border: none !important;
+}
+
+/* Home */
+.ant-btn:hover{
+    background-color: #063661 !important;
+}
+
+/* Project */
+.ant-card{
+    width: 358px !important;
+}
+.ant-card-body{
+    padding: 14px !important;
+}
+
+div#home-page div#intro,
+div#home-page div#home-banner{
+    width: 50%;
+    height: 570px;
+}
+div#intro{
+    padding-left: 110px;
+    padding-top: 100px;
+} 
+div#intro h1{
+    font-size: 60px;
+    font-family: sans-serif;
+    margin: 20px 0;
+}
+div#intro p:first-child,p#about-us-title,p#my-work-text,p#services-text,p#experience-text,p#testimonial-text{
+    width: fit-content;
+    font-family: sans-serif;
+    padding: 5px 13px;
+    border-radius: 7px;
+    border: 1px solid black;
+    
+}
+div#intro p:last-of-type{
+    font-size: 25px;
+    font-family: sans-serif;
+    margin-bottom: 20px;
+}
+div#intro button , button#get-in-touch{
+    padding: 18px 30px;
+    border-radius: 50px;
+    margin-right: 20px;
+    float: left;
+}
+div#connect-site-logo{
+    float: left;
+    padding-top: 10px;
+}
