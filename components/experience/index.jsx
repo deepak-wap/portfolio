@@ -47,7 +47,7 @@ const Experience = ()=>{
   ]
     return (
         <div
-          className="grid grid-cols-1 px-[8.6%] pb-16 bg-[#05192E]"
+          className="grid grid-cols-1 px-[8.6%] pb-16 bg-[#F7F7FF]"
           id="experience"
         >
         <div className="mt-28">
@@ -59,7 +59,7 @@ const Experience = ()=>{
               EXPERIENCE
             </h1>
           </Button>
-          <h2 className="text-[40px] text-white font-grotesk font-bold leading-[48px] mb-11">
+          <h2 className="text-[40px] text-black font-grotesk font-bold leading-[48px] mb-11">
             MY WORK <span className="text-[#0788FF]">EXPERIENCE</span>
           </h2>
         </div>

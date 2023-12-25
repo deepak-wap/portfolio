@@ -24,8 +24,8 @@ const Footer = ()=>{
   }, []);
 
     return (
-        <div className="bg-[#07233B] text-center border-t border-slate-700 py-5">
-        <span className="text-[14px] text-white  font-grotesk">
+        <div className="bg-[#F7F7FF] text-center border-t border-slate-700 py-5">
+        <span className="text-[14px] text-black  font-grotesk">
           © 2023 copyright all right reserved
         </span>
         <div className={`fixed right-[25px] bottom-[40px] ${scrollHeight > 400 ? '' : 'hidden'}`}>

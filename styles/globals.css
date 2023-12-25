@@ -11,23 +11,26 @@
 /* class="ant-menu-overflow-item ant-menu-item ant-menu-item-selected ant-menu-item-only-child" */
 .ant-menu-overflow{
     background-color: transparent;
+    border: none !important;
 }
 .ant-menu-title-content{
-    color: #ece9e9 !important;
+    /* color: #ece9e9 !important; */
+    color: black !important;
     margin-top: -10px !important;
 
 }
 
 .nav-btn .ant-btn:hover, .home-btn .ant-btn:hover, .common-btn .ant-btn:hover{
-    background-color: black !important;
+    background-color: inherit !important;
     text-decoration: underline !important;
     font-weight: bold !important;
-    border: 2px solid white !important;
-    transition: 0.5s;
+    border: 2px solid black !important;
+    color: black !important;
+    /* transition: 0.5s; */
 }
 
 .ant-menu-item:hover, .ant-menu-item-selected{
-    color: #ece9e9 !important;
+    color: black !important;
     /* border-bottom: 2px solid white !important; */
     text-decoration: underline;
     text-underline-offset: 10px;
@@ -50,42 +53,4 @@
 }
 .ant-card-body{
     padding: 14px !important;
-}
-
-div#home-page div#intro,
-div#home-page div#home-banner{
-    width: 50%;
-    height: 570px;
-}
-div#intro{
-    padding-left: 110px;
-    padding-top: 100px;
-} 
-div#intro h1{
-    font-size: 60px;
-    font-family: sans-serif;
-    margin: 20px 0;
-}
-div#intro p:first-child,p#about-us-title,p#my-work-text,p#services-text,p#experience-text,p#testimonial-text{
-    width: fit-content;
-    font-family: sans-serif;
-    padding: 5px 13px;
-    border-radius: 7px;
-    border: 1px solid black;
-    
-}
-div#intro p:last-of-type{
-    font-size: 25px;
-    font-family: sans-serif;
-    margin-bottom: 20px;
-}
-div#intro button , button#get-in-touch{
-    padding: 18px 30px;
-    border-radius: 50px;
-    margin-right: 20px;
-    float: left;
-}
-div#connect-site-logo{
-    float: left;
-    padding-top: 10px;
 }

@@ -21,7 +21,7 @@ const Homepage = () => {
         <title>Deepak - Full Stack Developer</title>
       </Head>
       <div id="home">
-        <div className="grid grid-cols-2 px-[8.5%] bg-[#05192E]">
+        <div className="grid grid-cols-2 px-[8.5%] bg-[#F7F7FF]"> {/* bg-[#05192E] */}
           <div className="flex flex-col justify-start mt-28 pt-24">
             <Button
               type="primary"
@@ -31,20 +31,20 @@ const Homepage = () => {
                 DEEPAK - MERN DEVELOPER
               </h1>
             </Button>
-            <h2 className="text-[70px] text-white font-grotesk font-bold leading-snug">
+            <h2 className="text-[70px] text-black font-grotesk font-bold leading-snug">
               HAY! I'M DEEPAK
             </h2>
             <h2 className="text-[48px] text-[#0788FF] font-grotesk font-bold leading-snug mb-5">
               {word}
               <Cursor />
             </h2>
-            <p className="text-[20px] text-white font-grotesk mb-6">
+            <p className="text-[20px] text-black font-grotesk mb-6">
               Yet bed any for travelling assistance indulgence unpleasing. Not
               thoughts all exercise blessing. Indulgence way everything joy
               alteration boisterous the attachment.
             </p>
             <div className="flex items-center gap-6 common-btn">
-              <Button type="primary w-[192px] h-[56px] rounded-[30px] bg-[#0788FC] font-medium">
+              <Button type="primary w-[192px] h-[56px] rounded-[30px] bg-[black] font-medium">
                 <span className="text-[15.5px] font-grotesk tracking-[0.3px]">
                   DOWNLOAD CV
                 </span>
