@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Navbar from '@/components/navbar'
 import Home from '@/components/home'
+import Skill from '@/components/skill'
 import About from '@/components/about'
 import Project from '@/components/projects'
 import Experience from '@/components/experience'
@@ -13,8 +14,9 @@ const App = ()=>{
             <Navbar />
             <Home />
             <About />
-            <Project />
+            <Skill />
             <Experience />
+            <Project />
             <Contact />
             <Footer />
         </>

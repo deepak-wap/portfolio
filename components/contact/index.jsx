@@ -32,7 +32,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="grid grid-cols-1 bg-[#97B2BB] px-[8.6%] py-14" id="contact">
+    <div className="grid grid-cols-1 bg-[#F7F7FF] px-[8.6%] py-14" id="contact">
       <div className=" border border-[1px] border-[#05315B] rounded-[6px]">
         <div className="w-full flex gap-8 h-[206px] bg-[#1F242D]/[0.5] px-12 py-14">
           <div className="w-[30%]">

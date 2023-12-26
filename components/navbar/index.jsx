@@ -21,7 +21,11 @@ const items = [
   },
   {
     key: "skills",
-    label: <Link href="/#experience">SKILLS</Link>,
+    label: <Link href="/#skills">SKILLS</Link>,
+  },
+  {
+    key: "experience",
+    label: <Link href="/#experience">EXPERIENCE</Link>,
   },
   {
     key: "resume",
@@ -37,7 +41,6 @@ useEffect(()=>{
       typeof window !== "undefined"
         ? window.pageYOffset || document.documentElement.scrollTop
         : 0;
-        console.log(currentScrollHeight);
     setScrollHeight(currentScrollHeight);
   };
 
@@ -51,8 +54,8 @@ useEffect(()=>{
 }, []);
 
   return (
-    <>
-      <Header className={`w-full flex justify-between items-center px-[8.7%] h-[95px] z-[50] transition ease-in-out duration-700 fixed navbar bg-[#F7F7FF]`}> {/*bg-[#040B17] */}
+    <div className="mb-[95px]">
+      <Header className={`w-full flex justify-between items-center px-[8.7%] h-[95px] z-[50] transition ease-in-out duration-700 fixed top-0 left-0 navbar bg-[#F7F7FF]`}> {/*bg-[#040B17] */}
         <h1 className="text-[38px] text-black font-grotesk font-bold">
           DEEPAK
         </h1>
@@ -67,7 +70,7 @@ useEffect(()=>{
             }}
             className={`gap-1 text-[14.7px] text-[#ece9e9] font-grotesk font-semibold tracking-[0.8px]`}
           />
-          <a href="#contact" className="nav-btn">
+          <a href="/#contact" className="nav-btn">
           <Button type="primary w-[145px] h-[56px] rounded-[30px] bg-[black] font-normal">
             <span className="text-[15.5px] font-grotesk tracking-[0.3px]">
               CONTACT
@@ -76,7 +79,7 @@ useEffect(()=>{
           </a>
         </div>
       </Header>
-    </>
+    </div>
   );
 };
 

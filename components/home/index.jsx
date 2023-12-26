@@ -22,7 +22,7 @@ const Homepage = () => {
       </Head>
       <div id="home">
         <div className="grid grid-cols-2 px-[8.5%] bg-[#F7F7FF]"> {/* bg-[#05192E] */}
-          <div className="flex flex-col justify-start mt-28 pt-24">
+          <div className="flex flex-col justify-center">
             <Button
               type="primary"
               className="items-center bg-[#063661] w-fit h-[30px] px-3 py-0 rounded-[4px]"
@@ -68,7 +68,7 @@ const Homepage = () => {
               </div>
             </div>
           </div>
-          <div className="ml-3 mt-28 pt-10">
+          <div className="ml-3 pt-10">
             <Image src={"/images/home-banner.png"} width={546} height={581} alt="home-banner"/>
           </div>
         </div>

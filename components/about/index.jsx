@@ -13,7 +13,7 @@ import { Button, Layout, Card } from "antd";
 
 const About = ()=>{
     return (
-      <div className="grid grid-cols-2 px-[8.5%] pb-16 bg-[#F7F7FF]" id="about">
+      <div className="grid grid-cols-2 px-[8.5%] pb-16" id="about">
         <div className="pl-24 pt-10 pb-24 mt-28 relative">
           <Image
             src="/images/about-banner.png"

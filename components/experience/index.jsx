@@ -47,7 +47,7 @@ const Experience = ()=>{
   ]
     return (
         <div
-          className="grid grid-cols-1 px-[8.6%] pb-16 bg-[#F7F7FF]"
+          className="grid grid-cols-1 px-[8.6%] pb-16"
           id="experience"
         >
         <div className="mt-28">
