@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useRef, useState } from "react";
 import "@/styles/Home.module.css";
 import Navbar from "../navbar";
@@ -16,45 +17,35 @@ const Project = ()=>{
   const projects = [
     {
       key: 1,
-      title: 'Website Design',
-      desc: 'Web Design, App Design',
-      img: '/images/popup-project-1.jpg',
-      href: '/'
+      img: '/images/holidify.png',
+      href: 'https://www.holidify.com/'
     },
     {
       key: 2,
-      title: 'Website Design',
-      desc: 'Web Design, App Design',
-      img: '/images/popup-project-1.jpg',
-      href: '/'
+      img: '/images/vr.png',
+      href: 'https://www.infivr.com/'
     },
     {
       key: 3,
-      title: 'Website Design',
-      desc: 'Web Design, App Design',
-      img: '/images/popup-project-1.jpg',
-      href: '/'
+      img: '/images/ramagya.png',
+      href: 'https://ramagyaschool.com/'
     },
     {
       key: 4,
-      title: 'Website Design',
-      desc: 'Web Design, App Design',
-      img: '/images/popup-project-1.jpg',
-      href: '/'
+      img: '/images/chennai-taxi.png',
+      href: 'https://chennaitaxiservice.com/'
     },
     {
       key: 5,
-      title: 'Website Design',
-      desc: 'Web Design, App Design',
-      img: '/images/popup-project-1.jpg',
-      href: '/'
+      img: '/images/maya-architects.png',
+      href: 'https://www.mayaarchitects.com/'
     },
     {
       key: 6,
       title: 'Website Design',
       desc: 'Web Design, App Design',
-      img: '/images/popup-project-1.jpg',
-      href: '/'
+      img: '/images/mcc-school.png',
+      href: 'http://mccpublicschool.edu.in/'
     },
   ]
 
@@ -79,29 +70,14 @@ const Project = ()=>{
           {
             projects.map((project,index) => {
               return (
-                <Card className=" h-[350px] mb-10" key={index}>
-                  <Image
-                    src={project.img}
-                    width={328}
-                    height={246}
-                    className="mb-4 rounded-[8px]"
-                    alt={`project-${project.title}`}
-                  />
-                  <div className="flex justify-between items-end pr-1">
-                    <div>
-                      <h5 className="text-[20px] text-black font-grotesk font-semibold">
-                        {project.title}
-                      </h5>
-                      <p className="text-[#707476] font-grotesk">
-                        {project.desc}
-                      </p>
-                    </div>
-                    <div className="w-[45px] h-[45px] bg-[#1877F2] rounded-[50%] border-2 border-black flex justify-center items-center">
-                      <a href="/" className="text-[20px]">
-                        <i className="fa fa-long-arrow-right text-white font-grotesk font-bold" />
-                      </a>
-                    </div>
-                  </div>
+                <Card className="mb-10 shadow-xl shadow-inner overflow-hidden" key={index}>
+                    <Link href={project.href} target="_blank" >
+                      <div 
+                        className="project_effect h-[250px] rounded-lg"  
+                        style={{ backgroundImage: `url(${project.img})`, backgroundSize: 'cover' }}
+                      >
+                      </div>
+                    </Link>
                 </Card>
               );
             })

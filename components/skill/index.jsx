@@ -7,7 +7,16 @@ import { FaYoutube } from "react-icons/fa6";
 import { FaSquareTwitter } from "react-icons/fa6";
 
 // import React from 'react';
-import { Button, Checkbox, Form, Input, Row, Col, Progress,Layout } from "antd";
+import {
+  Button,
+  Checkbox,
+  Form,
+  Input,
+  Row,
+  Col,
+  Progress,
+  Layout,
+} from "antd";
 // import Layout from "../shared/layout";
 
 //  tab import statement
@@ -61,90 +70,77 @@ const SkillPage = () => {
   };
 
   return (
-      <div className="main" id="skills">
-        <div className="bg-[#F7F7FF]">
-          <Row>
-            <Col span={12}>
-              <div className="header">
-                <h1 className="text-5xl font-bold">Skills & Experience</h1>
-              </div>
+    <div className="main" id="skills">
+      <div className="bg-[#F7F7FF] px-[8.6%] pb-8">
+        <div className="grid grid-cols-1">
+          <div>
+            <div className="mt-24">
+              <Button
+                type="primary"
+                className="items-center bg-[#063661] w-fit h-[29px] p-0 px-3 mb-3 rounded-[4px]"
+              >
+                <h1 className="text-[16px] text-white font-grotesk tracking-[4px]">
+                  SKILLS
+                </h1>
+              </Button>
+              <h2 className="text-[40px] text-black font-grotesk font-bold leading-[48px] mb-8">
+                MY <span className="text-[#0788FF]">SKIILS</span>
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div className="grid grid-cols-2 gap-16">
+          <div>
+            <div className="mb-3">
+              <h2>HTML</h2>
+              <Progress percent={98} status="active" />
+            </div>
+            <div className="mb-3">
+              <h2>Css</h2>
+              <Progress percent={95} status="active" />
+            </div>
+            <div className="mb-3">
+              <h2>Bootsrap</h2>
+              <Progress percent={90} status="active" />
+            </div>
+            <div className="mb-3">
+              <h2>Java Script </h2>
+              <Progress percent={90} status="active" />
+            </div>
+            <div className="mb-3">
+              <h2>PHP</h2>
+              <Progress percent={88} status="active" />
+            </div>
+          </div>
+          <div>
+            <div className="mb-3">
+              <h2>Angular</h2>
+              <Progress percent={90} status="active" />
+            </div>
 
-              <div>
-                <p className="text-lg">
-                  Stet no et lorem dolor et diam, amet duo ut dolore vero eos.
-                  No stet est diam rebum amet diam ipsum clita dolor duo clita
-                  sit.
-                </p>
-              </div>
-              <div className="">
-                <div>
-                  <h1>My Skills</h1>
-                </div>
-                <div>
-                  <Row>
-                    <Col span={12}>
-                      <div className="one">
-                        <div>
-                          <h2>HTML</h2>
-                          <Progress percent={98} status="active" />
-                        </div>
+            <div className="mb-3">
+              <h2>React Js </h2>
+              <Progress percent={95} status="active" />
+            </div>
 
-                        <div>
-                          <h2>Css</h2>
-                          <Progress percent={95} status="active" />
-                        </div>
+            <div className="mb-3">
+              <h2>Next js </h2>
+              <Progress percent={95} status="active" />
+            </div>
 
-                        <div>
-                          <h2>Bootsrap</h2>
-                          <Progress percent={90} status="active" />
-                        </div>
+            <div className="mb-3">
+              <h2>Node Js </h2>
+              <Progress percent={90} status="active" />
+            </div>
 
-                        <div>
-                          <h2>Java Script </h2>
-                          <Progress percent={90} status="active" />
-                        </div>
-
-                        <div>
-                          <h2>PHP</h2>
-                          <Progress percent={88} status="active" />
-                        </div>
-                      </div>
-                    </Col>
-                    <Col span={12}>
-                      <div className="two ml-3">
-                        <div>
-                          <h2>Angular</h2>
-                          <Progress percent={90} status="active" />
-                        </div>
-
-                        <div>
-                          <h2>React Js </h2>
-                          <Progress percent={95} status="active" />
-                        </div>
-
-                        <div>
-                          <h2>Next js </h2>
-                          <Progress percent={95} status="active" />
-                        </div>
-
-                        <div>
-                          <h2>Node Js </h2>
-                          <Progress percent={90} status="active" />
-                        </div>
-
-                        <div>
-                          <h2>React Native</h2>
-                          <Progress percent={75} status="active" />
-                        </div>
-                      </div>
-                    </Col>
-                  </Row>
-                </div>
-              </div>
-            </Col>
-          </Row>
+            <div className="mb-3">
+              <h2>React Native</h2>
+              <Progress percent={75} status="active" />
+            </div>
+          </div>
         </div>
       </div>
+    </div>
   );
 };
 

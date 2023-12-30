@@ -1,5 +1,3 @@
-import Head from "next/head";
-import Image from "next/image";
 import Link from "next/link";
 import "@/styles/Navbar.module.css";
 import { useState,  useEffect} from "react";
@@ -9,7 +7,7 @@ const { Header } = Layout;
 const items = [
   {
     key: "home",
-    label: <a href="/#home">HOME</a>,
+    label: <Link href="/">HOME</Link>,
   },
   {
     key: "about-me",
@@ -57,7 +55,7 @@ useEffect(()=>{
     <div className="mb-[95px]">
       <Header className={`w-full flex justify-between items-center px-[8.7%] h-[95px] z-[50] transition ease-in-out duration-700 fixed top-0 left-0 navbar bg-[#F7F7FF]`}> {/*bg-[#040B17] */}
         <h1 className="text-[38px] text-black font-grotesk font-bold">
-          DEEPAK
+          <Link href='/' className="text-[38px] text-black font-grotesk font-bold hover:text-black">DEEPAK</Link>
         </h1>
         <div className="flex items-center gap-14">
           <Menu

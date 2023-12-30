@@ -48,7 +48,7 @@ const Resume = () => {
           <div className="col-span-3 flex flex-col items-center py-20 bg-[#181818]">
             <div className="w-[240px] h-[240px] rounded-[50%] bg-[#0788FF] overflow-hidden mb-8">
               <div className="w-[300px] mt-[-8%]">
-                <Image src={'/images/d-2.png'} width={720} height={480} />
+                <Image src={'/images/resume.png'} width={720} height={480} />
               </div>
             </div>
             <div className="mb-5">

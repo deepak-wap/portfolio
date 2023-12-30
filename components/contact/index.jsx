@@ -1,78 +1,49 @@
-import React, { useState } from "react";
-import Image from "next/image";
+import React from "react";
+import axios from "axios";
 import { Button, Form, Input } from "antd";
-
-const MyFormItemContext = React.createContext([]);
-function toArr(str) {
-  return Array.isArray(str) ? str : [str];
-}
-const MyFormItemGroup = ({ prefix, children }) => {
-  const prefixPath = React.useContext(MyFormItemContext);
-  const concatPath = React.useMemo(
-    () => [...prefixPath, ...toArr(prefix)],
-    [prefixPath, prefix]
-  );
-  return (
-    <MyFormItemContext.Provider value={concatPath}>
-      {children}
-    </MyFormItemContext.Provider>
-  );
-};
-const MyFormItem = ({ name, ...props }) => {
-  const prefixPath = React.useContext(MyFormItemContext);
-  const concatName =
-    name !== undefined ? [...prefixPath, ...toArr(name)] : undefined;
-  return <Form.Item name={concatName} {...props} />;
-};
+const {TextArea} = Input;
 
 const Contact = () => {
   const [form] = Form.useForm();
-  const onFinish = (values) => {
-    console.log("Received values of form: ", values);
+  const sendMessage = async (values) => {
+    try{
+      await axios.post("/api/mail", values);
+    }
+    catch(error){
+      console.log(error);
+    }
   };
 
   return (
     <div className="grid grid-cols-1 bg-[#F7F7FF] px-[8.6%] py-14" id="contact">
-      <div className=" border border-[1px] border-[#05315B] rounded-[6px]">
-        <div className="w-full flex gap-8 h-[206px] bg-[#1F242D]/[0.5] px-12 py-14">
-          <div className="w-[30%]">
-            <Image src={"/images/contact-us.png"} width={291} height={291} />
-          </div>
-          <div className="w-[565px]">
-            <h1 className="text-[40px] text-[white] font-grotesk font-medium leading-[48px]">
-              Let’s Discuss Your Project
-            </h1>
-            <p className="text-[17px] text-[white] font-grotesk font-medium leading-[27.2px]">
-              Always available for freelancing if the right project comes along,
-              Feel free to contact me.
-            </p>
-          </div>
-        </div>
-        <div className="w-full flex gap-8 h-[510px] bg-[#323946] h-[150px] bg-[#053059] px-12 py-14">
-          <div className="w-[30%]">
-            <div className="mb-5">
-            <p className="text-[12px] text-white font-grotesk leading-[19.2px] mt-[125px]">
-              WRITE AN E-MAIL
-            </p>
-            <a
-              href="/"
-              className="text-[22px] text-white font-grotesk font-medium leading-[35.2px]"
-            >
-              wapdk.09@gmail.com
-            </a>
-            </div>
-            <div className="mb-10">
-            <p className="text-[12px] text-white font-grotesk leading-[19.2px]">
-              WRITE AN E-MAIL
-            </p>
-            <a
-              href="/"
-              className="text-[22px] text-white font-grotesk font-medium leading-[35.2px]"
-            >
-              +91 88029 66275
-            </a>
-            </div>
-            <div className="flex gap-[9px]">
+      <div className="border border-[1px] border-[#05315B] rounded-[6px]">
+        <div className="w-full flex gap-8 h-auto bg-[#323946] h-[150px] bg-[#053059] px-12 pt-12">
+          <div onSubmit={(e) => sendMessage(e)} className="w-full">
+            <div className="flex justify-between mb-10">
+              <div className="bg-[#063660] px-6 py-2 rounded-[8px]">
+                <p className="text-[12px] text-white font-grotesk leading-[19.2px]">
+                  WRITE AN E-MAIL
+                </p>
+                <a
+                  href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=GTvVlcRzCblQnHXLmkPpWzqjDJmNXhNDTzVfLmcnWQwMfHfqntQtpzTscQLGTgfNKmbwJwbjNMqzk"
+                  target="_blank"
+                  className="text-[22px] text-white font-grotesk font-medium leading-[35.2px]"
+                >
+                  wapdk.09@gmail.com
+                </a>
+              </div>
+              <div className="bg-[#063660] px-6 py-2 rounded-[8px]">
+                <p className="text-[12px] text-white font-grotesk leading-[19.2px]">
+                  CONTACT ME
+                </p>
+                <p
+                  href="/"
+                  className="text-[22px] text-white font-grotesk font-medium leading-[35.2px]"
+                >
+                  +91 98105 67218
+                </p>
+              </div>
+              <div className="flex gap-5">
                 <div className="hover:mt-[-2px] w-[46px] h-[46px] bg-[#1877F2] rounded-[50%] border-2 border-white flex justify-center items-center">
                   <a href="/" className="text-[20px]">
                     <i className="fa fa-facebook text-white font-grotesk font-bold" />
@@ -89,76 +60,60 @@ const Contact = () => {
                   </a>
                 </div>
               </div>
-          </div>
-          <div>
-            <form>
-              <div className="flex gap-5 mb-7">
-                <div>
-                  <p
-                    htmlFor="fullname"
-                    className="text-[14px] text-white font-grotesk font-bold leading-[19.2px] mb-1"
-                  >
-                    FULL NAME
-                  </p>
-                  <input
-                    type="text"
-                    name="fullname"
-                    placeholder="Name"
-                    className="w-[324px] h-[42px] rounded-[4px] bg-transparent border border-1 px-2"
-                  />
+            </div>
+            <Form onFinish={sendMessage} layout="vertical" autoComplete="off">
+              <div className="grid grid-cols-2 gap-x-5 px-5">
+                <div className="col-span-1">
+                  <Form.Item label="FULL NAME" className="mb-0">
+                    <Form.Item
+                      name="name"
+                      rules={[
+                        {
+                          required: true,
+                        },
+                      ]}
+                    >
+                      <Input
+                        placeholder="Enter you name here"
+                        className="h-[45px] bg-transparent"
+                      />
+                    </Form.Item>
+                  </Form.Item>
+                  <Form.Item label="EMAIL" className="mb-0">
+                    <Form.Item
+                      name="email"
+                      rules={[
+                        {
+                          required: true,
+                        },
+                      ]}
+                    >
+                      <Input
+                        placeholder="Enter your email here"
+                        className="h-[45px] bg-transparent"
+                      />
+                    </Form.Item>
+                  </Form.Item>
                 </div>
-                <div>
-                  <p
-                    htmlFor="fullname"
-                    className="text-[14px] text-white font-grotesk font-bold leading-[19.2px] mb-1"
-                  >
-                    EMAIL
-                  </p>
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Email"
-                    className="w-[324px] h-[42px] rounded-[4px] bg-transparent border border-1 px-2"
-                  />
+                <div className="col-span-1 mb-0">
+                  <Form.Item label="YOUR MESSAGE" name={"message"}>
+                    <TextArea
+                      rows={6}
+                      className="bg-transparent outline-none focus:outline-none"
+                    />
+                  </Form.Item>
                 </div>
-              </div>
-              <div className="flex gap-5 mb-7">
-                <div className="w-full">
-                  <p
-                    htmlFor="fullname"
-                    className="text-[14px] text-white font-grotesk font-bold leading-[19.2px] mb-1"
+                <Form.Item className="w-full">
+                  <Button
+                    type="primary"
+                    htmlType="submit"
+                    className="w-[250px] text-[20px] h-[40px] px-8 bg-[blue] rounded-[40px] hover:border hover:border-1"
                   >
-                    SUBJECT
-                  </p>
-                  <input
-                    type="text"
-                    name="fullname"
-                    placeholder="Subject"
-                    className="w-full h-[42px] rounded-[4px] bg-transparent border border-1 px-2"
-                  />
-                </div>
+                    Submit
+                  </Button>
+                </Form.Item>
               </div>
-              <div className="flex gap-5 mb-4">
-                <div className="w-full">
-                  <p
-                    htmlFor="fullname"
-                    className="text-[14px] text-white font-grotesk font-bold leading-[19.2px] mb-1"
-                  >
-                    YOUR MESSAGE
-                  </p>
-                  <textarea
-                    name="fullname"
-                    placeholder="Your Message"
-                    className="w-full h-[120px] rounded-[4px] bg-transparent border border-1 px-2 py-3"
-                  />
-                </div>
-              </div>
-              <div className="flex mb-7">
-                <button className="w-full h-[55px] bg-[#0788FF] rounded-[40px]">
-                  SEND MESSAGE
-                </button>
-              </div>
-            </form>
+            </Form>
           </div>
         </div>
       </div>

@@ -50,7 +50,7 @@ const Experience = ()=>{
           className="grid grid-cols-1 px-[8.6%] pb-16"
           id="experience"
         >
-        <div className="mt-28">
+        <div className="mt-16">
           <Button
             type="primary"
             className="items-center bg-[#063661] w-fit h-[29px] p-0 px-3 mb-3 rounded-[4px]"

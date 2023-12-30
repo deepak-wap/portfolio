@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { IoMdArrowUp } from "react-icons/io"
 
 const Footer = ()=>{
@@ -10,7 +11,6 @@ const Footer = ()=>{
         typeof window !== "undefined"
           ? window.pageYOffset || document.documentElement.scrollTop
           : 0;
-          console.log(currentScrollHeight);
       setScrollHeight(currentScrollHeight);
     };
 

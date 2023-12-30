@@ -48,9 +48,24 @@
 }
 
 /* Project */
-.ant-card{
-    width: 358px !important;
-}
 .ant-card-body{
-    padding: 14px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.project_effect{
+    transition: ease-in-out ,2s;
+    background-position: top;
+}
+  
+.project_effect:hover{
+background-position: bottom;
+}
+
+/* Contact */
+
+.contact input, .contact textarea {
+    outline: none !important;
+    color: white !important;
+    font-weight: 300 !important;
 }
