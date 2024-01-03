@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useRef, useState } from "react";
 import "@/styles/Home.module.css";
 import Navbar from "../navbar";
@@ -16,31 +17,11 @@ const Experience = ()=>{
   const experiences = [
     {
       key: 1,
-      company: 'WELAB',
-      designation: 'Front-end Developer',
-      type: 'REMOTE',
-      join: 'JAN 2019',
-      leave: 'PRESENT',
-      time: 'FULL TIME',      
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation .',
-    },
-    {
-      key: 2,
-      company: 'WELAB',
-      designation: 'Front-end Developer',
-      type: 'REMOTE',
-      join: 'JAN 2019',
-      leave: 'PRESENT',
-      time: 'FULL TIME',      
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation .',
-    },
-    {
-      key: 3,
-      company: 'WELAB',
-      designation: 'Front-end Developer',
-      type: 'REMOTE',
-      join: 'JAN 2019',
-      leave: 'PRESENT',
+      company: 'Techsunset',
+      designation: 'Full-Stack Developer',
+      href: 'https://techsunset.com',
+      join: '2021',
+      leave: '2023',
       time: 'FULL TIME',      
       description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation .',
     },
@@ -73,12 +54,14 @@ const Experience = ()=>{
                       <h4 className="text-[24px] text-white font-grotesk font-bold leading-[28.8px] mb-2">
                         {experience.designation}
                       </h4>
-                      <span className="text-[14px] text-white font-grotesk mb-2">
-                        {experience.company} | {experience.type}
+                      <span className="text-[16px] text-white font-grotesk mb-2">
+                        {experience.company} | {experience.join} - {experience.leave}
                       </span>
-                      <p className="text-[16px] text-white font-grotesk mb-4">
-                        {experience.join} - {experience.leave}
-                      </p>
+                      <Link href={experience.href} target="_blank">
+                        <p className="text-[15.8px] text-white font-grotesk mb-4">
+                          {experience.href}
+                        </p>
+                      </Link>
                       <button className="bg-white px-4 py-[2px] rounded-[40px]">
                         <span className="text-[12px] text-[#040c16] font-grotesk font-bold">
                           {experience.time}

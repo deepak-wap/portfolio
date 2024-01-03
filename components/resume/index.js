@@ -46,17 +46,19 @@ const Resume = () => {
       <div className="grid grid-cols-1 bg-[#05192E]" id="resume">
         <div className="grid grid-cols-12 h-[1280px]">
           <div className="col-span-3 flex flex-col items-center py-20 bg-[#181818]">
-            <div className="w-[240px] h-[240px] rounded-[50%] bg-[#0788FF] overflow-hidden mb-8">
-              <div className="w-[300px] mt-[-8%]">
-                <Image src={'/images/resume.png'} width={720} height={480} />
-              </div>
+            <div className="w-[220px] h-[220px] rounded-[50%] bg-[#0788FF] overflow-hidden mb-8 flex justify-center items-center">
+            
+                <div>
+                <Image src={'/images/resume.png'} width={190} height={190} />
+                </div>
+           
             </div>
             <div className="mb-5">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-[30px] h-[30px] p-[7px] bg-[#0774BE]  rounded-[50%]">
                   <FaPhoneAlt className="text-[#00050D]" />
                 </div>
-                <span className="text-white font-grotesk">+91 8802966275</span>
+                <span className="text-white font-grotesk">+91 9810567218</span>
               </div>
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-[30px] h-[30px] bg-[#0774BE] p-[5px] rounded-[50%]">
@@ -71,7 +73,7 @@ const Resume = () => {
                   <FaMapMarkerAlt className="text-[#00050D]" />
                 </div>
                 <span className="text-white font-grotesk">
-                  123 Anywhere St., Any City
+                  Vasant Vihar, New Delhi
                 </span>
               </div>
             </div>
@@ -222,28 +224,6 @@ const Resume = () => {
                               NEXT JS
                             </h2>
 
-                            <FaAngular
-                              style={{ fontSize: "25px", marginLeft: "10px" }}
-                            />
-                            <h2 className="text-black-500 font-bold ml-1 mt-1">
-                              {" "}
-                              ANGULAR JS
-                            </h2>
-
-                            <FaVuejs
-                              style={{ fontSize: "25px", marginLeft: "10px" }}
-                            />
-                            <h2 className="text-black-500 font-bold ml-1 mt-1 ">
-                              VUE JS{" "}
-                            </h2>
-
-                            <SiNuxtdotjs
-                              style={{ fontSize: "25px", marginLeft: "10px" }}
-                            />
-                            <h2 className="text-black-500 font-bold ml-1 mt-1">
-                              NUXT JS
-                            </h2>
-
                             <SiAdobexd
                               style={{ fontSize: "25px", marginLeft: "10px" }}
                             />
@@ -275,13 +255,6 @@ const Resume = () => {
                             </div>
 
                             <div className="flex mt-5">
-                              <SiZoho
-                                style={{ fontSize: "25px", marginLeft: "10px" }}
-                              />
-                              <h2 className="text-black-500 font-bold ml-1 mt-1">
-                                {" "}
-                                Zoho Sprints
-                              </h2>
 
                               <SiJirasoftware
                                 style={{ fontSize: "25px", marginLeft: "10px" }}
@@ -289,20 +262,6 @@ const Resume = () => {
                               <h2 className="text-black-500 font-bold ml-1 mt-1">
                                 {" "}
                                 JIRA
-                              </h2>
-
-                              <IoLogoBitbucket
-                                style={{ fontSize: "25px", marginLeft: "10px" }}
-                              />
-                              <h2 className="text-black-500 font-bold ml-1 mt-1 ">
-                                BitBucket{" "}
-                              </h2>
-
-                              <FaGitlab
-                                style={{ fontSize: "25px", marginLeft: "10px" }}
-                              />
-                              <h2 className="text-black-500 font-bold ml-1 mt-1">
-                                Gitlab
                               </h2>
 
                               <FaGithub
@@ -326,25 +285,11 @@ const Resume = () => {
                                 Azure
                               </h2>
 
-                              <SiApachekafka
-                                style={{ fontSize: "25px", marginLeft: "10px" }}
-                              />
-                              <h2 className="text-black-500 font-bold ml-1 mt-1">
-                                Apache Kafka
-                              </h2>
-
                               <GiMushroomsCluster
                                 style={{ fontSize: "25px", marginLeft: "10px" }}
                               />
                               <h2 className="text-black-500 font-bold ml-1 mt-1">
                                 Cluster Architecture
-                              </h2>
-
-                              <FaDocker
-                                style={{ fontSize: "25px", marginLeft: "10px" }}
-                              />
-                              <h2 className="text-black-500 font-bold ml-1 mt-1">
-                                Docker
                               </h2>
                             </div>
                           </div>
@@ -366,27 +311,19 @@ const Resume = () => {
                               My SQL
                             </h2>
 
+                            <BiLogoMongodb
+                              style={{ fontSize: "25px", marginLeft: "10px" }}
+                            />
+                            <h2 className="text-black-500 font-bold ml-1 mt-1 ">
+                              MongoDB{" "}
+                            </h2>
+
                             <BiLogoPostgresql
                               style={{ fontSize: "25px", marginLeft: "10px" }}
                             />
                             <h2 className="text-black-500 font-bold ml-1 mt-1">
                               {" "}
                               Postgresql
-                            </h2>
-
-                            <SiAmazondynamodb
-                              style={{ fontSize: "25px", marginLeft: "10px" }}
-                            />
-                            <h2 className="text-black-500 font-bold ml-1 mt-1">
-                              {" "}
-                              AWS Dynamodb
-                            </h2>
-
-                            <BiLogoMongodb
-                              style={{ fontSize: "25px", marginLeft: "10px" }}
-                            />
-                            <h2 className="text-black-500 font-bold ml-1 mt-1 ">
-                              MongoDB{" "}
                             </h2>
                           </div>
                         </div>
@@ -474,45 +411,13 @@ const Resume = () => {
                 </div>
                 <div className="px-2 mb-4">
                   <p className="text-[17px] font-grotesk font-bold px-3">
-                    Arowwai Industries
+                    Techsunset
                   </p>
                   <p className="text-[17px] font-grotesk font-bold px-3">
-                    Sydney - Australia
+                    Bengaluru - India
                   </p>
                   <p className="text-[17px] font-grotesk font-bold px-3 mb-1">
-                    2020 - 2022
-                  </p>
-                  <p className="w-[450px] text-[15px] font-grotesk font-medium px-3">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Vestibulum sit amet quam rhoncus, egestas dui eget, malesuada
-                    justo. Ut aliquam augue.
-                  </p>
-                </div>
-                <div className="px-2 mb-4">
-                  <p className="text-[17px] font-grotesk font-bold px-3">
-                    Wardiere Inc.
-                  </p>
-                  <p className="text-[17px] font-grotesk font-bold px-3">
-                    Sydney - Australia
-                  </p>
-                  <p className="text-[17px] font-grotesk font-bold px-3 mb-1">
-                    2016 - 2020
-                  </p>
-                  <p className="w-[450px] text-[15px] font-grotesk font-medium px-3">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Vestibulum sit amet quam rhoncus, egestas dui eget, malesuada
-                    justo. Ut aliquam augue.
-                  </p>
-                </div>
-                <div className="px-2 mb-4">
-                  <p className="text-[17px] font-grotesk font-bold px-3">
-                    Studio Showde
-                  </p>
-                  <p className="text-[17px] font-grotesk font-bold px-3">
-                    Sydney - Australia
-                  </p>
-                  <p className="text-[17px] font-grotesk font-bold px-3 mb-1">
-                    2010 - 2015
+                    2021 - 2023
                   </p>
                   <p className="w-[450px] text-[15px] font-grotesk font-medium px-3">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -531,24 +436,13 @@ const Resume = () => {
                 </div>
                 <div className="px-2 mb-4">
                   <p className="text-[17px] font-grotesk font-bold px-3">
-                    Borcelle University
+                    Bachelor of Computer Application
                   </p>
                   <p className="text-[15px] font-grotesk font-medium px-3">
-                    Bachelor of Business Management
+                    Indira Gandhi Open University
                   </p>
                   <p className="text-[15px] font-grotesk font-medium px-3">
-                    2014 - 2023
-                  </p>
-                </div>
-                <div className="px-2 mb-4">
-                  <p className="text-[17px] font-grotesk font-bold px-3">
-                    Borcelle University
-                  </p>
-                  <p className="text-[15px] font-grotesk font-medium px-3">
-                    Bachelor of Business Management
-                  </p>
-                  <p className="text-[15px] font-grotesk font-medium px-3">
-                    2014 - 2023
+                    2019 - 2023
                   </p>
                 </div>
               </div>

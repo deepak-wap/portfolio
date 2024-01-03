@@ -1,15 +1,22 @@
 import Head from "next/head";
 import Image from "next/image";
+import { useEffect } from 'react'
 import "font-awesome/css/font-awesome.min.css";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { Button } from "antd";
 
 const Homepage = () => {
+  useEffect(() => {
+    const resumeUrl = '/assets/resume.pdf'
+    const a = document.createElement('a')
+    if (!sessionStorage.getItem('download')) a.href = resumeUrl
+    a.download = 'deepak-mern-full-stack.pdf'
+    document.body.appendChild(a)
+    a.click();
+    document.body.removeChild(a);
+    return sessionStorage.setItem('download', 'true')
+  }, []);
+
   const [word] = useTypewriter({
     words: ["FULL STACK DEVELOPER", "FRONTEND DEVELOPER", "BACKEND DEVELOPER"],
     loop: 0,
@@ -47,11 +54,13 @@ const Homepage = () => {
               development.
             </p>
             <div className="flex items-center gap-6 common-btn">
-              <Button type="primary w-[192px] h-[56px] rounded-[30px] bg-[black] font-medium">
-                <span className="text-[15.5px] font-grotesk tracking-[0.3px]">
-                  DOWNLOAD CV
-                </span>
-              </Button>
+              <a href={'/assets/resume.pdf'} download='deepak-mern-full-stack'>
+                <Button type="primary w-[192px] h-[56px] rounded-[30px] bg-[black] font-medium">
+                  <span className="text-[15.5px] font-grotesk tracking-[0.3px]">
+                    DOWNLOAD CV
+                  </span>
+                </Button>
+              </a>
               <div className="flex gap-[9px]">
                 <div className="hover:mt-[-2px] w-[46px] h-[46px] bg-[#1877F2] rounded-[50%] border-2 border-white flex justify-center items-center">
                   <a href="/" className="text-[20px]">
